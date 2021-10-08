@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+# Cocktail Cards made Simple
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What is this thing?
+
+This is a big experiment that will never actually become much of anything itself, but will inspire much of the development of other packages and apps based on what this project was originally trying to accomplish.
+
+The basic premis was HTML -> PDF, which then became React -> PDF.
+
+This app currently does nothing but output a cheatsheet of predefined cocktail recipes.
+
+This code was put in a repository as a basic archive/reference to refer to.
+
+### Also Note
+
+Much of what is in this repository is unused, untested, and not even fully written. I can't stress enough that this was a big experiment/playground that happens to have some ideas worth saving for future reference (for me anyway).
 
 ## Available Scripts
 
