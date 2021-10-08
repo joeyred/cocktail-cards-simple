@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
-function App() {
+import { RecipeCard } from './components/RecipeCard';
+
+import uuid from './utils/uuid';
+
+import { specialty, summerUpdate } from './data/cocktails';
+
+function Cards(props) {
+  const { items } = props;
+  // console.log(specialty);
+  // const data = items || [];
+  return (
+    <ul className='cheatsheet'>
+      {items.map((item, index) => {
+        if (index === 6) {
+
+        }
+        return index === 6 ? (
+          <li className='cheatsheet-item'>
+            <RecipeCard {...item} key={`${uuid()}`} />
+            <div className='spacer'></div>
+          </li>
+        ) : (
+          <li className='cheatsheet-item'>
+            <RecipeCard {...item} key={`${uuid()}-${index}`} />
+          </li>
+        )
+      })}
+    </ul>
+  );
+}
+
+function App(props) {
+  const { isSummer } = props;
+
+  const heading = isSummer ? 'Summer Cocktails' : 'Specialty Cocktails';
+  const items = isSummer ? summerUpdate : specialty;
+  // console.log(specialty);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="page-heading">{heading}</h1>
+      <Cards items={items} />
     </div>
   );
 }
