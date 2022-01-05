@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App isSummer={false} />
+    <App isSummer={true} />
   </React.StrictMode>,
   document.getElementById('root')
 );
